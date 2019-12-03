@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrape Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: #D5D8DC">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <h1>Mars Scrape Results</h1>
+                </center>
+                <div class="col-md 12" align="right">
+                    <a href="/" class="btn btn-secondary btn-lg">Home</a>
+                </div>
+
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <h1>Mars News </h1>
+                <p>These are the latest news from Mars</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <ul>
+                <li>
+                    <p>{{mars_news[0]}}</p>
+                </li>
+                <li>
+                    <p>{{mars_news[1]}}</p>
+                </li>
+                <li>
+                    <p>{{mars_news[2]}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Images </h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>This is the feautured image in JPL's Website</p>
+            </div>
+            <div class="col-md-12">
+                <center>
+                    <img src={{mars_images}} height="420px" width="420px">
+                </center>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Weather</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>The weather in mars is: </p>
+                <p>{{mars_weather}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Facts </h1>
+            </div>
+            <hr>
+            <div class="col-md-12">
+                <p>Here are some interesting facts about Mars: </p>
+            </div>
+            <div class="col-md-12">
+                {{mars_facts | safe}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Hemispheres</h1>
+            </div>
+            <hr>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <p> The hemispheres in Mars are: </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="title">
+                    <p>Cerberus Hemisphere</p>
+                </div>
+                <a>
+                    <img src={{mars_hemispheres[0]}} height="240px" width="240px">
+                </a>
+                <div class="title">
+                    <p>Valles Marineris Hemisphere</p>
+                </div>
+                <a>
+                    <img src={{mars_hemispheres[1]}} height="240px" width="240px">
+                </a>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="title">
+                    <p>Syrtis Major Hemisphere</p>
+                </div>
+                <a>
+                    <img src={{mars_hemispheres[2]}} height="240px" width="240px">
+                </a>
+
+                <div class="title">
+                    <p>Schiaparelli Hemisphere</p>
+                </div>
+                <a>
+                    <img src={{mars_hemispheres[3]}} height="240px" width="240px">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
